@@ -30,7 +30,7 @@ a{
 /*----------------- navbar ------------------- */
 .navbar {
     background-color: none;
-    padding: 1.5vw;
+    padding: 1.5vw 3vw;
     color: #333;
     /* position: sticky; */
     top: 0;
@@ -48,7 +48,7 @@ a{
     justify-content: left;
     align-items: center;
     font-weight: normal;
-    margin-left: 3vw;
+    margin-left: 7.5vw;
     /* border: 2px solid red; */
 }
 
@@ -109,13 +109,13 @@ a{
 .header {
     margin: 0 15vw; /* Set left and right margins to 20vw */
     padding: 1vw;
+    padding-bottom: 0;
     display: flex;
     flex-direction: row;
     justify-content: center; /* Center items along the main axis (horizontally in this case) */
     align-items: center;
     /* border: 2px solid red; */
 }
-
 
 .header h1 {
     color: #333;
@@ -129,15 +129,10 @@ a{
     color: #f283dc;
 }
 
-.header a{
-    color: #333;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 .header .text {
     flex: 1;
     padding: 0.5vw;
+    padding-bottom:0;
     flex-shrink: 1;
     /* border: 2px solid red; */
 }
@@ -171,6 +166,40 @@ a{
     font-size: 5rem;
 }
 
+/*----------------- intro ----------------- */
+
+.intro{
+    margin: 0 15vw; /* Set left and right margins to 20vw */
+    margin-right: 35vw;
+    padding: 1vw;
+    padding-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items along the main axis (horizontally in this case) */
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.intro p{
+    padding: 0.5vw;
+    padding-top: 0;
+    margin-top: 0;
+}
+.intro p b {
+    color: #f283dc;
+}
+
+.intro a{
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.1s ease-in-out;
+    
+}
+
+.intro a:hover .material-symbols-outlined{
+    transform: scale(1.2);
+}
 
 /*----------------- about content ----------------- */
 
