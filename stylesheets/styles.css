@@ -169,7 +169,7 @@ a{
 /*----------------- intro ----------------- */
 
 .intro{
-    margin: 0 15vw; /* Set left and right margins to 20vw */
+    margin-left: 15vw;
     margin-right: 35vw;
     padding: 1vw;
     padding-top: 0;
@@ -189,7 +189,7 @@ a{
     color: #f283dc;
 }
 
-.intro a{
+.intro p a{
     color: #333;
     font-weight: bold;
     text-decoration: none;
@@ -197,7 +197,7 @@ a{
     
 }
 
-.intro a:hover .material-symbols-outlined{
+.intro p a:hover .material-symbols-outlined{
     transform: scale(1.2);
 }
 
