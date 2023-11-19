@@ -1,0 +1,264 @@
+body, html {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.75vw; 
+    width: 100%
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+p{
+    color: #333;
+    font-weight: normal;
+    font-size: 2rem;
+    line-height: 1.5;
+    /* border: 2px solid red; */
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+
+/*----------------- navbar ------------------- */
+.navbar {
+    background-color: none;
+    padding: 1.5vw;
+    color: #333;
+    /* position: sticky; */
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+.logo a{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    font-weight: normal;
+    margin-left: 3vw;
+    /* border: 2px solid red; */
+}
+
+.logo.index a{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.logo img{
+    flex:1;
+    max-width: 3vw;
+    height: auto;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out;
+}
+.logo:hover img{
+    transform: rotate(0deg);
+}
+
+.logo p{
+    flex-shrink:1;
+    font-size: 2rem;
+    margin-left: 1vw;
+    /* border: 2px solid red; */
+
+}
+
+.nav-links {
+    font-size: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 10vw;
+    transition: transform 0.1s ease-in-out;
+}
+.nav-links li:hover{
+    transform:scale(1.1);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
+}
+
+/*----------------- content ------------------- */
+.content {
+    margin: 3vw;
+    padding: 2vw;
+    /* border: 2px solid red; */
+
+}
+/*----------------- header ------------------- */
+.header {
+    margin: 0 15vw; /* Set left and right margins to 20vw */
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items along the main axis (horizontally in this case) */
+    align-items: center;
+    /* border: 2px solid red; */
+}
+
+
+.header h1 {
+    color: #333;
+    font-weight: normal;
+    font-size: 10rem;
+    margin: 0;
+    /* border: 2px solid red; */
+}
+
+.header p b {
+    color: #f283dc;
+}
+
+.header a{
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header .text {
+    flex: 1;
+    padding: 0.5vw;
+    flex-shrink: 1;
+    /* border: 2px solid red; */
+}
+
+.header .pic {
+    flex: 1;
+    padding: 0.5vw;
+    text-align: center;
+    /* border: 2px solid red; */
+}
+
+.header .pic img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    
+}
+
+.header.about{
+    margin: 0 5vw;
+    display: block;
+}
+
+.header.about .text{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.header.about h1{
+    font-size: 5rem;
+}
+
+
+/*----------------- about content ----------------- */
+
+.about_block{
+    margin: 0 5vw; /* Set left and right margins */
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items along the main axis (horizontally in this case) */
+    align-items: top;
+}
+
+.about_block .text{
+    flex-shrink: 2;
+}
+
+.about_block .pic{
+    flex-shrink: 1;
+    padding: 0.5vw;
+    text-align: center;
+}
+
+.about_block .pic img{
+    max-width: 50%;
+    height: auto;
+    border-radius: 10%;
+}
+
+
+/*----------------- project content ----------------- */
+.projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5vw;
+}
+
+.card{
+    width: 20vw;
+    margin: 2vw;
+    padding: 2vw;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect on hover */
+    /* border: 2px solid red; */
+
+}
+.card:hover {
+    transform: scale(1.05); /* Scale the card on hover */
+}
+
+.card img {
+    border-radius: 8px;
+    max-height: 20vh;
+    max-width: 100%;
+}
+
+.card-content {
+    margin-top: 15px;
+}
+
+.card h3 {
+    margin: 0;
+    color: #333;
+    font-size: 2rem;
+}
+
+.card p {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.card .skills{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.card .skills li{
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+    padding: 0.3vw;
+    background-color: #ddd;
+    color:#333;
+    border-radius: 6px;
+    font-weight: bold;
+}
