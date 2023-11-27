@@ -13,6 +13,16 @@ body, html {
   'opsz' 24
 }
 
+h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+h3{
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 p{
     color: #333;
     font-weight: normal;
@@ -24,6 +34,10 @@ p{
 a{
     text-decoration: none;
     color: #333;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 
@@ -49,6 +63,7 @@ a{
     align-items: center;
     font-weight: normal;
     margin-left: 7.5vw;
+    text-decoration: none;
     /* border: 2px solid red; */
 }
 
@@ -80,12 +95,13 @@ a{
     font-size: 1.5rem;
     list-style-type: none;
     margin: 0;
+    margin-right: 5vw;
     padding: 0;
     display: flex;
 }
 
 .nav-links li {
-    margin-right: 10vw;
+    margin-left: 7vw;
     transition: transform 0.1s ease-in-out;
 }
 .nav-links li:hover{
@@ -101,6 +117,7 @@ a{
 /*----------------- content ------------------- */
 .content {
     margin: 3vw;
+    margin-top: 1.5vw;
     padding: 2vw;
     /* border: 2px solid red; */
 
@@ -120,7 +137,7 @@ a{
 .header h1 {
     color: #333;
     font-weight: normal;
-    font-size: 10rem;
+    font-size: 9rem;
     margin: 0;
     /* border: 2px solid red; */
 }
@@ -151,29 +168,13 @@ a{
     
 }
 
-.header.about{
-    margin: 0 5vw;
-    display: block;
-}
-
-.header.about .text{
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-.header.about h1{
-    font-size: 5rem;
-}
-
-/*----------------- intro ----------------- */
+/*----------------- homepage intro ----------------- */
 
 .intro{
     margin-left: 15vw;
-    margin-right: 35vw;
+    margin-right: 32.5vw;
     padding: 1vw;
     padding-top: 0;
-    display: flex;
     flex-direction: row;
     justify-content: center; /* Center items along the main axis (horizontally in this case) */
     align-items: center;
@@ -192,7 +193,6 @@ a{
 .intro p a{
     color: #333;
     font-weight: bold;
-    text-decoration: none;
     transition: transform 0.1s ease-in-out;
     
 }
@@ -201,9 +201,87 @@ a{
     transform: scale(1.2);
 }
 
+.socials{
+    padding-left: 0.5vw;
+    padding-top: 0;
+}
+
+.socials a{
+    padding-right: 1.5vw;
+    transition: transform 0.1s ease-in-out;
+}
+.socials .github{
+    transform: scale(1.2)
+}
+
+.socials a:hover img{
+    transform: scale(1.2);
+}
+.socials .github:hover{
+    transform: scale(1.4);
+}
+
+/*----------------- about header ----------------- */
+
+.header.about{
+    margin: 0 10vw;
+    margin-bottom: 5vh;
+    display: block;
+}
+
+.header.about .text{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.header.about h1{
+    font-size: 5rem;
+}
+
 /*----------------- about content ----------------- */
 
 .about_block{
+    margin: 0 10vw; /* Set left and right margins */
+    margin-top: 5vh;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items along the main axis (horizontally in this case) */
+    align-items: top;
+}
+
+.about_block a:hover{
+    color:#f283dc;
+}
+
+.about_block .text{
+    flex: 1.5;
+}
+.about_block .text p{
+    margin-top: 0;
+}
+
+
+.about_block .text p b{
+    color: #f283dc;
+}
+
+.about_block .pic{
+    flex: 1;
+    text-align: left;
+    /* padding-right: 1vw; */
+
+}
+
+.about_block .pic img{
+    max-width: 90%;
+    height: auto;
+    border-radius: 10%;
+
+}
+
+.column{
     margin: 0 5vw; /* Set left and right margins */
     padding: 1vw;
     display: flex;
@@ -212,22 +290,79 @@ a{
     align-items: top;
 }
 
-.about_block .text{
-    flex-shrink: 2;
+.column .column_elem{
+    flex: 1;
+    margin: 1.5vw;
+}
+.column .column_elem h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
+.column .column_elem p b{
+    color: #f283dc;
 }
 
-.about_block .pic{
-    flex-shrink: 1;
-    padding: 0.5vw;
-    text-align: center;
+/* .column .column_elem a{
+    transition: transform 0.1s ease-in-out;
+} */
+.column .column_elem a:hover{
+    color:#f283dc;
 }
 
-.about_block .pic img{
-    max-width: 50%;
+/*----------------- experience content ----------------- */
+
+.experience_block{
+    margin: 0 10vw; /* Set left and right margins */
+    margin-top: 2vh;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center items along the main axis (horizontally in this case) */
+    align-items: top;
+}
+
+.experience_block a:hover{
+    color:#f283dc;
+}
+
+.experience_block .text{
+    flex: 3;
+}
+.experience_block .text h2{
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+.experience_block .text h3{
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+
+.experience_block .text a:hover{
+    color:#333;
+}
+.experience_block .text p{
+    margin-top: 1vh;
+    font-size: 1.75rem;
+}
+
+.experience_block .text p b{
+    color: #f283dc;
+}
+
+.experience_block .pic{
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+
+}
+
+.experience_block .pic img{
+    max-width: 70%;
     height: auto;
     border-radius: 10%;
-}
 
+}
 
 /*----------------- project content ----------------- */
 .projects{
@@ -273,7 +408,7 @@ a{
     font-size: 1.5rem;
 }
 
-.card .skills{
+.skills{
     text-decoration: none;
     list-style-type: none;
     display: flex;
@@ -282,7 +417,7 @@ a{
     padding: 0;
 }
 
-.card .skills li{
+.skills li{
     margin-right: 0.5vw;
     margin-top: 0.5vw;
     padding: 0.3vw;
