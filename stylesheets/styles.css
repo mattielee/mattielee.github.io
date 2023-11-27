@@ -202,12 +202,12 @@ a:hover{
 }
 
 .socials{
-    padding-left: 0.5vw;
+    padding-left: 1vw;
     padding-top: 0;
 }
 
 .socials a{
-    padding-right: 1.5vw;
+    padding-right: 2vw;
     transition: transform 0.1s ease-in-out;
 }
 .socials img{
