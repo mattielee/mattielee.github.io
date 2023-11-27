@@ -210,15 +210,18 @@ a:hover{
     padding-right: 1.5vw;
     transition: transform 0.1s ease-in-out;
 }
+.socials img{
+    transform: scale(2);
+}
 .socials .github{
-    transform: scale(1.2)
+    transform: scale(2.2)
 }
 
 .socials a:hover img{
-    transform: scale(1.2);
+    transform: scale(2.2);
 }
 .socials .github:hover{
-    transform: scale(1.4);
+    transform: scale(2.4);
 }
 
 /*----------------- about header ----------------- */
