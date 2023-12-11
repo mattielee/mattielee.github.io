@@ -228,7 +228,7 @@ a:hover{
 
 .header.about{
     margin: 0 10vw;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
     display: block;
 }
 
@@ -244,74 +244,50 @@ a:hover{
 
 /*----------------- about content ----------------- */
 
-.about_block{
-    margin: 0 10vw; /* Set left and right margins */
-    margin-top: 5vh;
-    padding: 1vw;
+.about_intro{
+    margin: 0 16vw; /* Set left and right margins */
+    margin-top: 2vw;
+    padding: 0 1vw;
+}
+
+.about_intro h1{
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: #333;
+    font-style: italic;
+}
+
+.number_block {
+    margin: 0 10vw;
     display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center items along the main axis (horizontally in this case) */
-    align-items: top;
+    position: relative;
 }
-
-.about_block a:hover{
-    color:#f283dc;
+.number_block h1{
+    flex: 1;
+    /* position: absolute; */
+    margin: 0;
+    padding: 0;
+    height: 35vw;
+    font-size:50rem;
+    color: #f7ebf7;
+    
 }
-
-.about_block .text{
-    flex: 1.5;
+.number_block .text h2{
+    color: #333;
+    font-size: 5rem;
 }
-.about_block .text p{
-    margin-top: 0;
+.number_block .text{
+    position: absolute;
+    padding: 0 1vw;
+    top: 35%;
+    left: 15%;
 }
-
-
-.about_block .text p b{
+.number_block .text b{
     color: #f283dc;
 }
-
-.about_block .pic{
-    flex: 1;
-    text-align: left;
-    /* padding-right: 1vw; */
-
-}
-
-.about_block .pic img{
-    max-width: 90%;
-    height: auto;
-    border-radius: 10%;
-
-}
-
-.column{
-    margin: 0 5vw; /* Set left and right margins */
-    padding: 1vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center; /* Center items along the main axis (horizontally in this case) */
-    align-items: top;
-}
-
-.column .column_elem{
-    flex: 1;
-    margin: 1.5vw;
-}
-.column .column_elem h2{
-    font-size: 3rem;
-    margin-top: 0;
-}
-.column .column_elem p b{
+.number_block .text a:hover{
     color: #f283dc;
 }
-
-/* .column .column_elem a{
-    transition: transform 0.1s ease-in-out;
-} */
-.column .column_elem a:hover{
-    color:#f283dc;
-}
-
 /*----------------- experience content ----------------- */
 
 .experience_block{
@@ -351,6 +327,9 @@ a:hover{
 .experience_block .text p b{
     color: #f283dc;
 }
+.experience_block .text p a:hover{
+    color: #f283dc;
+}
 
 .experience_block .pic{
     flex: 1;
@@ -363,7 +342,6 @@ a:hover{
 .experience_block .pic img{
     max-width: 70%;
     height: auto;
-    border-radius: 10%;
 
 }
 
@@ -396,8 +374,9 @@ a:hover{
     max-width: 100%;
 }
 
-.card-content {
+.card-content-collapsed.show {
     margin-top: 15px;
+    display: block;
 }
 
 .card h3 {
@@ -428,4 +407,57 @@ a:hover{
     color:#333;
     border-radius: 6px;
     font-weight: bold;
+}
+
+.popup-overlay{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 12.5%;
+    width: 75vw;
+    height: 35vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+.popup-inner-content {
+    padding: 5vw;
+    color:#333;
+    
+}
+.popup-inner-content h3{
+    font-size: 3rem;
+    margin-bottom: 1vw;
+}
+.popup-inner-content p{
+    font-size: 2rem;
+}
+.popup-inner-content .skills{
+    font-size: 1.2rem;
+}
+.popup-inner-content img{
+    width: 50%;
+    text-align: center;
 }

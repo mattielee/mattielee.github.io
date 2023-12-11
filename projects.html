@@ -44,16 +44,20 @@
 			</div>
             <!--end of header-->
             <div class="projects">
-                    <div class="card">
-                        <img src="assets/floating_pt_card.jpg">
-                        <div class="card-content">
+                    <div class="card" data-index="1">
+                        <div class="card-content-collapsed">
+                            <img src="assets/floating_pt_card.jpg">
                             <h3>
-                                Floating Point Library
+                                Floating Point Library [C2S2] 
                             </h3>
                             <ul class="skills">
                                 <li>SystemVerilog</li>
                                 <li>ASIC Design Flow</li>
                                 <li>Register Retiming</li>
+                                <li>Floating Point Arithmetic</li>
+                                <li>OpenLane</li>
+                                <li>Yosys</li>
+                                <li>ABC</li>
                             </ul>
                             <p>
                                 <i>in progress!</i><br>
@@ -62,17 +66,17 @@
                                     <b>Berkeley HardFloat library</b>
                                 </a> 
                                 into the C2S2 IP. <br>
-                                We are currently implementing a SystemVerilog wrapper with a valid/ready 
-                                interface and researching options for register retiming using open-source synthesis tools. 
+                                We are currently working towards a Spring 2024 tape out by testing the HardFloat blocks and 
+                                researching options for register retiming using open-source synthesis tools. 
                             </p>
                         </div>
                     </div>
                     <!--end card-->
-                    <div class="card">
-                        <img src="assets/mode_stirring_card.jpg">
-                        <div class="card-content">
+                    <div class="card" data-index="2">
+                        <div class="card-content-collapsed">
+                            <img src="assets/mode_stirring_card.jpg">
                             <h3>
-                                Mode Stirring Antennas
+                                Mode Stirring Antennas [Research] 
                             </h3>
                             <ul class="skills">
                                 <li>PCB Design</li>
@@ -80,23 +84,92 @@
                                 <li>Embedded Systems</li>
                             </ul>
                             <p>
-                                coming soon
+                                This work was as part of Professor Matt Reynolds' Lab. 
+                                I co-authored a <a href="https://ieeexplore.ieee.org/document/10178597" target="_blank"><b>paper</b></a>
+                                on mode-stirring systems that was published in the 2023 IEEE International Conference on RFID!
+                                My work included designing and assembling 2.4GHz mode stirring antennas that control the phase of the reflected
+                                signal for two polarizations. I am currently working with the Reynolds' Lab group on a new paper detailing 
+                                updates to the previous mode-stirring system. 
+                            </p>
+                        </div>
+                        <div class="card-content-expanded">
+
+                        </div>
+                    </div>
+                    <!--end card-->
+                    <div class="card" data-index="3">
+                        <div class="card-content-collapsed">
+                            <img src="assets/processor-datapath.png">
+                            <h3>
+                                Multicore Processor [Course Lab] 
+                            </h3>
+                            <ul class="skills">
+                                <li>Computer Architecture</li>
+                                <li>SystemVerilog</li>
+                                <li>Python</li>
+                            </ul>
+                            <p>
+                                I designed and implemented a quad-core processor with a simple ring network, 
+                                private instruction caches, and a shared, banked data cache. 
+                                This project was a culmination of a semester's worth of labs for Professor Christopher Batten’s Computer Architecture course.
                             </p>
                         </div>
                     </div>
                     <!--end card-->
-                    <div class="card">
-                        <h3>
-                            Multicore Processor
-                        </h3>
-                        <p>
-                            coming soon
-                        </p>
+                    <div class="card" data-index="4">
+                        <div class="card-content-collapsed">
+                            <img src="assets/starlink_satellites.jpg">
+                            <h3>
+                                Packet Sampler [SpaceX] 
+                            </h3>
+                            <ul class="skills">
+                                <li>SystemVerilog</li>
+                                <li>FPGA Design Flow</li>
+                            </ul>
+                            <p>
+                                For the second half of my internship at SpaceX, I architected an FPGA module 
+                                to sample packet data as it passes through the Starlink satellite constellation, 
+                                allowing systematic identification of drop points and network failures.
+                            </p>
+                        </div>
+                    </div>
+                    <!--end card-->
+
+                    <div class="card" data-index="5">
+                        <div class="card-content-collapsed">
+                            <img src="assets/5725-robot.jpg">
+                            <h3>
+                                Robotic Arm Color Sorter [Course Lab]
+                            </h3>
+                            <ul class="skills">
+                                <li>Computer Vision</li>
+                                <li>Inverse Kinematics</li>
+                                <li>Embedded Operating Systems</li>
+                                <li>Python</li>
+                                <li>Linux</li>
+                            </ul>
+                            <p>
+                                I worked with a team to build a robotic arm that used machine learning to identify different colored “fruits” (colored puff balls) and sort them into bins. 
+                                We used a Raspberry Pi running a Linux OS to control the system.
+                            </p>
+                        </div>
+                        <div class="card-content-expanded">
+
+                        </div>
                     </div>
                     <!--end card-->
             </div>
             <!--end projects-->
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content" id="popupContent">
+                    <button class="close-button" id="closeButton">&times;</button>
+                    <div class="popup-inner-content" id="popupInnerContent">
+                        <!-- Popup content will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
 		</div>
+        <script src="script.js"></script>
 	</body>
 		
 
