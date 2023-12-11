@@ -30,6 +30,9 @@ p{
     line-height: 1.5;
     /* border: 2px solid red; */
 }
+p b{
+    color: #f283dc;
+}
 
 a{
     text-decoration: none;
@@ -87,8 +90,11 @@ a:hover{
     flex-shrink:1;
     font-size: 2rem;
     margin-left: 1vw;
+    color: #333;
     /* border: 2px solid red; */
-
+}
+.logo p b{
+    color:#333;
 }
 
 .nav-links {
@@ -389,6 +395,9 @@ a:hover{
     color: #666;
     font-size: 1.5rem;
 }
+.card p a:hover{
+    color:#f283dc;
+}
 
 .skills{
     text-decoration: none;
@@ -460,4 +469,8 @@ a:hover{
 .popup-inner-content img{
     width: 50%;
     text-align: center;
+}
+
+.popup-inner-content p a:hover{
+    color:#f283dc;
 }
