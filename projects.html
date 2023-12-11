@@ -28,6 +28,7 @@
 			</div>
 			<ul class="nav-links">
 				<li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
 				<li><a href="projects.html"><b>Projects</b></a></li>
 				<li><a href="assets/MadeleineLeeResume2023_3.pdf" download="MadeleineLeeResume" target="_blank">Resume</a></li>
 			</ul>
@@ -38,53 +39,137 @@
             <!--header-->
 			<div class="header about">
 				<div class="text">
-					<h1><b>💻 check out some things i've been working on!</b></h1>
+					<h1><b>💻 Check out some things I've been working on!</b></h1>
 				</div>
-				
 			</div>
             <!--end of header-->
             <div class="projects">
-                    <div class="card">
-                        <img src="assets/floating_pt_card.jpg">
-                        <div class="card-content">
+                    <div class="card" data-index="1">
+                        <div class="card-content-collapsed">
+                            <img src="assets/floating_pt_card.jpg">
                             <h3>
-                                Floating Point Library
+                                Floating Point Library [C2S2] 
                             </h3>
                             <ul class="skills">
                                 <li>SystemVerilog</li>
                                 <li>ASIC Design Flow</li>
                                 <li>Register Retiming</li>
+                                <li>Floating Point Arithmetic</li>
+                                <li>OpenLane</li>
+                                <li>Yosys</li>
+                                <li>ABC</li>
                             </ul>
                             <p>
-                                description
+                                <i>in progress!</i><br>
+                                I am working with another student to integrate the 
+                                <a href="http://www.jhauser.us/arithmetic/HardFloat.html" target="_blank">
+                                    <b>Berkeley HardFloat library</b>
+                                </a> 
+                                into the C2S2 IP. <br>
+                                We are currently working towards a Spring 2024 tape out by testing the HardFloat blocks and 
+                                researching options for register retiming using open-source synthesis tools. 
                             </p>
                         </div>
                     </div>
                     <!--end card-->
-                    <div class="card">
-                        <img src="assets/mode_stirring_card.jpg">
-                        <div class="card-content">
+                    <div class="card" data-index="2">
+                        <div class="card-content-collapsed">
+                            <img src="assets/mode_stirring_card.jpg">
                             <h3>
-                                Project 1
+                                Mode Stirring Antennas [Research] 
                             </h3>
+                            <ul class="skills">
+                                <li>PCB Design</li>
+                                <li>RF Circuits</li>
+                                <li>Embedded Systems</li>
+                            </ul>
                             <p>
-                                description
+                                This work was as part of Professor Matt Reynolds' Lab. 
+                                I co-authored a <a href="https://ieeexplore.ieee.org/document/10178597" target="_blank"><b>paper</b></a>
+                                on mode-stirring systems that was published in the 2023 IEEE International Conference on RFID!
+                                My work included designing and assembling 2.4GHz mode stirring antennas that control the phase of the reflected
+                                signal for two polarizations. I am currently working with the Reynolds' Lab group on a new paper detailing 
+                                updates to the previous mode-stirring system. 
+                            </p>
+                        </div>
+                        <div class="card-content-expanded">
+
+                        </div>
+                    </div>
+                    <!--end card-->
+                    <div class="card" data-index="3">
+                        <div class="card-content-collapsed">
+                            <img src="assets/processor-datapath.png">
+                            <h3>
+                                Multicore Processor [Course Lab] 
+                            </h3>
+                            <ul class="skills">
+                                <li>Computer Architecture</li>
+                                <li>SystemVerilog</li>
+                                <li>Python</li>
+                            </ul>
+                            <p>
+                                I designed and implemented a quad-core processor with a simple ring network, 
+                                private instruction caches, and a shared, banked data cache. 
+                                This project was a culmination of a semester's worth of labs for Professor Christopher Batten’s Computer Architecture course.
                             </p>
                         </div>
                     </div>
                     <!--end card-->
-                    <div class="card">
-                        <h3>
-                            Project 1
-                        </h3>
-                        <p>
-                            description
-                        </p>
+                    <div class="card" data-index="4">
+                        <div class="card-content-collapsed">
+                            <img src="assets/starlink_satellites.jpg">
+                            <h3>
+                                Packet Sampler [SpaceX] 
+                            </h3>
+                            <ul class="skills">
+                                <li>SystemVerilog</li>
+                                <li>FPGA Design Flow</li>
+                            </ul>
+                            <p>
+                                For the second half of my internship at SpaceX, I architected an FPGA module 
+                                to sample packet data as it passes through the Starlink satellite constellation, 
+                                allowing systematic identification of drop points and network failures.
+                            </p>
+                        </div>
+                    </div>
+                    <!--end card-->
+
+                    <div class="card" data-index="5">
+                        <div class="card-content-collapsed">
+                            <img src="assets/5725-robot.jpg">
+                            <h3>
+                                Robotic Arm Color Sorter [Course Lab]
+                            </h3>
+                            <ul class="skills">
+                                <li>Computer Vision</li>
+                                <li>Inverse Kinematics</li>
+                                <li>Embedded Operating Systems</li>
+                                <li>Python</li>
+                                <li>Linux</li>
+                            </ul>
+                            <p>
+                                I worked with a team to build a robotic arm that used machine learning to identify different colored “fruits” (colored puff balls) and sort them into bins. 
+                                We used a Raspberry Pi running a Linux OS to control the system.
+                            </p>
+                        </div>
+                        <div class="card-content-expanded">
+
+                        </div>
                     </div>
                     <!--end card-->
             </div>
             <!--end projects-->
+            <div class="popup-overlay" id="popupOverlay">
+                <div class="popup-content" id="popupContent">
+                    <button class="close-button" id="closeButton">&times;</button>
+                    <div class="popup-inner-content" id="popupInnerContent">
+                        <!-- Popup content will be dynamically loaded here -->
+                    </div>
+                </div>
+            </div>
 		</div>
+        <script src="script.js"></script>
 	</body>
 		
 

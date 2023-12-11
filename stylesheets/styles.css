@@ -13,6 +13,16 @@ body, html {
   'opsz' 24
 }
 
+h2{
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+h3{
+    font-size: 2rem;
+    margin-top: 0;
+}
+
 p{
     color: #333;
     font-weight: normal;
@@ -20,10 +30,17 @@ p{
     line-height: 1.5;
     /* border: 2px solid red; */
 }
+p b{
+    color: #f283dc;
+}
 
 a{
     text-decoration: none;
     color: #333;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 
@@ -49,6 +66,7 @@ a{
     align-items: center;
     font-weight: normal;
     margin-left: 7.5vw;
+    text-decoration: none;
     /* border: 2px solid red; */
 }
 
@@ -72,20 +90,24 @@ a{
     flex-shrink:1;
     font-size: 2rem;
     margin-left: 1vw;
+    color: #333;
     /* border: 2px solid red; */
-
+}
+.logo p b{
+    color:#333;
 }
 
 .nav-links {
     font-size: 1.5rem;
     list-style-type: none;
     margin: 0;
+    margin-right: 5vw;
     padding: 0;
     display: flex;
 }
 
 .nav-links li {
-    margin-right: 10vw;
+    margin-left: 7vw;
     transition: transform 0.1s ease-in-out;
 }
 .nav-links li:hover{
@@ -101,6 +123,7 @@ a{
 /*----------------- content ------------------- */
 .content {
     margin: 3vw;
+    margin-top: 1.5vw;
     padding: 2vw;
     /* border: 2px solid red; */
 
@@ -120,7 +143,7 @@ a{
 .header h1 {
     color: #333;
     font-weight: normal;
-    font-size: 10rem;
+    font-size: 9rem;
     margin: 0;
     /* border: 2px solid red; */
 }
@@ -151,29 +174,13 @@ a{
     
 }
 
-.header.about{
-    margin: 0 5vw;
-    display: block;
-}
-
-.header.about .text{
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
-.header.about h1{
-    font-size: 5rem;
-}
-
-/*----------------- intro ----------------- */
+/*----------------- homepage intro ----------------- */
 
 .intro{
-    margin: 0 15vw; /* Set left and right margins to 20vw */
-    margin-right: 35vw;
+    margin-left: 15vw;
+    margin-right: 32.5vw;
     padding: 1vw;
     padding-top: 0;
-    display: flex;
     flex-direction: row;
     justify-content: center; /* Center items along the main axis (horizontally in this case) */
     align-items: center;
@@ -189,22 +196,109 @@ a{
     color: #f283dc;
 }
 
-.intro a{
+.intro p a{
     color: #333;
     font-weight: bold;
-    text-decoration: none;
     transition: transform 0.1s ease-in-out;
     
 }
 
-.intro a:hover .material-symbols-outlined{
+.intro p a:hover .material-symbols-outlined{
     transform: scale(1.2);
+}
+
+.socials{
+    padding-left: 1vw;
+    padding-top: 0;
+}
+
+.socials a{
+    padding-right: 2vw;
+    transition: transform 0.1s ease-in-out;
+}
+.socials img{
+    transform: scale(2);
+}
+.socials .github{
+    transform: scale(2.2)
+}
+
+.socials a:hover img{
+    transform: scale(2.2);
+}
+.socials .github:hover{
+    transform: scale(2.4);
+}
+
+/*----------------- about header ----------------- */
+
+.header.about{
+    margin: 0 10vw;
+    margin-bottom: 1vh;
+    display: block;
+}
+
+.header.about .text{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.header.about h1{
+    font-size: 5rem;
 }
 
 /*----------------- about content ----------------- */
 
-.about_block{
-    margin: 0 5vw; /* Set left and right margins */
+.about_intro{
+    margin: 0 16vw; /* Set left and right margins */
+    margin-top: 2vw;
+    padding: 0 1vw;
+}
+
+.about_intro h1{
+    font-weight: normal;
+    font-size: 2.5rem;
+    color: #333;
+    font-style: italic;
+}
+
+.number_block {
+    margin: 0 10vw;
+    display: flex;
+    position: relative;
+}
+.number_block h1{
+    flex: 1;
+    /* position: absolute; */
+    margin: 0;
+    padding: 0;
+    height: 35vw;
+    font-size:50rem;
+    color: #f7ebf7;
+    
+}
+.number_block .text h2{
+    color: #333;
+    font-size: 5rem;
+}
+.number_block .text{
+    position: absolute;
+    padding: 0 1vw;
+    top: 35%;
+    left: 15%;
+}
+.number_block .text b{
+    color: #f283dc;
+}
+.number_block .text a:hover{
+    color: #f283dc;
+}
+/*----------------- experience content ----------------- */
+
+.experience_block{
+    margin: 0 10vw; /* Set left and right margins */
+    margin-top: 2vh;
     padding: 1vw;
     display: flex;
     flex-direction: row;
@@ -212,22 +306,50 @@ a{
     align-items: top;
 }
 
-.about_block .text{
-    flex-shrink: 2;
+.experience_block a:hover{
+    color:#f283dc;
 }
 
-.about_block .pic{
-    flex-shrink: 1;
-    padding: 0.5vw;
-    text-align: center;
+.experience_block .text{
+    flex: 3;
+}
+.experience_block .text h2{
+    margin-top: 0;
+    margin-bottom: 1vh;
+}
+.experience_block .text h3{
+    margin-top: 0;
+    margin-bottom: 1vh;
 }
 
-.about_block .pic img{
-    max-width: 50%;
+.experience_block .text a:hover{
+    color:#333;
+}
+.experience_block .text p{
+    margin-top: 1vh;
+    font-size: 1.75rem;
+}
+
+.experience_block .text p b{
+    color: #f283dc;
+}
+.experience_block .text p a:hover{
+    color: #f283dc;
+}
+
+.experience_block .pic{
+    flex: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+
+}
+
+.experience_block .pic img{
+    max-width: 70%;
     height: auto;
-    border-radius: 10%;
-}
 
+}
 
 /*----------------- project content ----------------- */
 .projects{
@@ -258,8 +380,9 @@ a{
     max-width: 100%;
 }
 
-.card-content {
+.card-content-collapsed.show {
     margin-top: 15px;
+    display: block;
 }
 
 .card h3 {
@@ -272,8 +395,11 @@ a{
     color: #666;
     font-size: 1.5rem;
 }
+.card p a:hover{
+    color:#f283dc;
+}
 
-.card .skills{
+.skills{
     text-decoration: none;
     list-style-type: none;
     display: flex;
@@ -282,7 +408,7 @@ a{
     padding: 0;
 }
 
-.card .skills li{
+.skills li{
     margin-right: 0.5vw;
     margin-top: 0.5vw;
     padding: 0.3vw;
@@ -290,4 +416,61 @@ a{
     color:#333;
     border-radius: 6px;
     font-weight: bold;
+}
+
+.popup-overlay{
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 12.5%;
+    width: 75vw;
+    height: 35vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    position: absolute;
+    top: 1%;
+    right: 3%;
+    font-size: 3rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+.popup-inner-content {
+    padding: 5vw;
+    color:#333;
+    
+}
+.popup-inner-content h3{
+    font-size: 3rem;
+    margin-bottom: 1vw;
+}
+.popup-inner-content p{
+    font-size: 2rem;
+}
+.popup-inner-content .skills{
+    font-size: 1.2rem;
+}
+.popup-inner-content img{
+    width: 50%;
+    text-align: center;
+}
+
+.popup-inner-content p a:hover{
+    color:#f283dc;
 }
